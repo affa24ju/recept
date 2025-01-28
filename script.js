@@ -46,8 +46,16 @@ fetch(url + "big mac")
         `;
 
         let ingredientCon = document.getElementById("ingredient-con");
-        let parent = document.getElementById("receipe");
+        let parent = document.createElement("ul");
+        let receipe = document.getElementById("receipe");
         let hideReceipe = document.getElementById("hide-receipe");
         let showReceipe = document.getElementById("show-receipe");
+
+        ingredients.forEach((i) => {
+            let child = document.createElement("li");
+            child.innerText = i;
+            parent.appendChild(child);
+            ingredientCon.appendChild(parent);
+        });
         
     });
