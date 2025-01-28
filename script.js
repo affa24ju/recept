@@ -35,7 +35,7 @@ fetch(url + "big mac")
         <img src=${myMeal.strMealThumb}>
         <div class="details">
             <h2>${myMeal.strMeal}</h2>
-            <h2>${myMeal.strArea}</h2>
+            <h4>${myMeal.strArea}</h4>
         </div>
         <div id="ingredient-con"></div>
         <div id="receipe">
@@ -43,6 +43,10 @@ fetch(url + "big mac")
             <pre id="instructions">${myMeal.strInstructions}</pre>
         </div>
         `;
+
+        let ingredientCon = document.getElementById("ingredient-con");
+        let parent = document.getElementById("receipe");
+        let hideReceipe = document.getElementById("hide-receipe");
         
         
     });
