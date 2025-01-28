@@ -39,7 +39,7 @@ fetch(url + "big mac")
         </div>
         <div id="ingredient-con"></div>
         <div id="receipe">
-            
+            <button id="hide-receipe">X</button>
             <pre id="instructions">${myMeal.strInstructions}</pre>
         </div>
         `;
