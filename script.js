@@ -69,7 +69,11 @@ searchBtn.addEventListener("click", () => {
         });
 
         
+    })
+    .catch(() => {
+        result.innerHTML = `<h3>Ogiltig text! Försök igen.</h3>`;
     });
+    
     }
 });
 
