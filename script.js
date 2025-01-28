@@ -10,13 +10,13 @@ fetch(url + "big mac")
     .then((data) => {
         //console.log(data);
         let myMeal = data.meals[0];
-        console.log(myMeal);
+        /*console.log(myMeal);
         console.log(myMeal.strMealThumb);
         console.log(myMeal.strMeal);
         console.log(myMeal.strArea);
-        console.log(myMeal.strInstructions);      
+        console.log(myMeal.strInstructions); */     
         let count = 1;
-        let ingredient = [];
+        let ingredients = [];
         for (let i in myMeal) {
             let ingredient = "";
             let measure = "";
@@ -24,9 +24,14 @@ fetch(url + "big mac")
                 ingredient = myMeal[i];
                 measure = myMeal[`strMeasure` + count];
                 count += 1;
-                console.log(ingredient, measure);
+                //console.log(ingredient, measure);
+                ingredients.push(`${measure} ${ingredient}`);
                 
             }
         }
+        console.log(ingredients);
+
+        result.innerHTML = `<img src=${myMeal.strMealThumb}>`;
+        
         
     });
