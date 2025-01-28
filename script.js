@@ -42,11 +42,12 @@ fetch(url + "big mac")
             <button id="hide-receipe">X</button>
             <pre id="instructions">${myMeal.strInstructions}</pre>
         </div>
+        <button id="show-receipe">Visa Recept</button>
         `;
 
         let ingredientCon = document.getElementById("ingredient-con");
         let parent = document.getElementById("receipe");
         let hideReceipe = document.getElementById("hide-receipe");
-        
+        let showReceipe = document.getElementById("show-receipe");
         
     });
