@@ -44,3 +44,30 @@ img {
     width: 50%;
     margin: 1.8em auto 0 auto;
 }
+#receipe {
+    position: absolute;
+    background-color: antiquewhite;
+    min-height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    border-radius: 0.6em;
+    
+}
+#receipe pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    padding: 2.5em 1.2em 1.2em 1.2em;
+}
+#hide-receipe {
+    font-size: 1em;
+    position: relative;
+    width: 1.8em;
+    height: 1.8em;
+    background-color: darkolivegreen;
+    border: none;
+    top: 1.2em;
+    left: 90%;
+    border-radius: 0.3em;
+}
