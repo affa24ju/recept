@@ -3,9 +3,12 @@ let searchBtn = document.getElementById("searchBtn");
 let result = document.getElementById("result");
 let url = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
 
-let userInput = document.getElementById("userInput").value;
-
-fetch(url + "big mac")
+searchBtn.addEventListener("click", () => {
+    let userInput = document.getElementById("userInput").value;
+    if (userInput.length == 0) {
+        result.innerHTML = `<h3>Måste skriva nåt... t.ex. pizza!</h3>`;
+    } else {
+        fetch(url + userInput)
     .then((response) => response.json())
     .then((data) => {
         //console.log(data);
@@ -67,3 +70,8 @@ fetch(url + "big mac")
 
         
     });
+    }
+});
+
+
+
