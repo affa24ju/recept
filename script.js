@@ -57,5 +57,13 @@ fetch(url + "big mac")
             parent.appendChild(child);
             ingredientCon.appendChild(parent);
         });
+
+        hideReceipe.addEventListener("click", () => {
+            receipe.style.display = "none";
+        });
+        showReceipe.addEventListener("click", () => {
+            receipe.style.display = "block";
+        });
+
         
     });
