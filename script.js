@@ -31,7 +31,13 @@ fetch(url + "big mac")
         }
         console.log(ingredients);
 
-        result.innerHTML = `<img src=${myMeal.strMealThumb}>`;
+        result.innerHTML = `
+        <img src=${myMeal.strMealThumb}>
+        <div class="details">
+            <h2>${myMeal.strMeal}</h2>
+            <h2>${myMeal.strArea}</h2>
+        </div>
+        `;
         
         
     });
