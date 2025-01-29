@@ -71,6 +71,30 @@ img {
     border-radius: 0.3em;
     font-weight: 600;
 }
+#add-favorit {
+    font-size: 1em;
+    position: relative;
+    right: 30%;
+    padding: 0.9em 0.6em;
+    background-color: darkolivegreen;
+    border: none;
+    top: 1.5em;
+    border-radius: 0.3em;
+    font-weight: 600;
+}
+#popup {
+    position: absolute;
+    width: auto;
+    transform: translateX(-50%);
+    background-color: antiquewhite;
+    min-height: 50px;
+    padding: auto;
+    text-align: center;
+    font-size: 1.5em;
+    border-radius: 0.6em;
+    display: none; 
+   
+}
 #receipe {
     position: absolute;
     background-color: antiquewhite;
