@@ -46,6 +46,8 @@ searchBtn.addEventListener("click", () => {
             <pre id="instructions">${myMeal.strInstructions}</pre>
         </div>
         <button id="show-receipe">Visa Recept</button>
+        <button id="add-favorit">Lägg till som favorit</button>
+        <div id="popup">Lagt till som favorit.</div>
         `;
 
         let ingredientCon = document.getElementById("ingredient-con");
@@ -53,6 +55,8 @@ searchBtn.addEventListener("click", () => {
         let receipe = document.getElementById("receipe");
         let hideReceipe = document.getElementById("hide-receipe");
         let showReceipe = document.getElementById("show-receipe");
+        let addFavorit = document.getElementById("add-favorit");
+        let popup = document.getElementById("popup");
 
         ingredients.forEach((i) => {
             let child = document.createElement("li");
@@ -66,6 +70,15 @@ searchBtn.addEventListener("click", () => {
         });
         showReceipe.addEventListener("click", () => {
             receipe.style.display = "block";
+        });
+        addFavorit.addEventListener("click", () => {
+            console.log("add favorit");
+            popup.style.display = "block";
+
+            //Hide popup after 2 sec
+            setTimeout(() => {
+                popup.style.display= "none";
+            }, 2000); 
         });
 
         
