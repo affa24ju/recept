@@ -91,6 +91,7 @@ img {
     border: none;
     border-radius: 0.3em;
     font-weight: 600;
+    font-size: 1.5em;
     display: block;
 }
 #deleteFavoritBtn {
@@ -150,6 +151,11 @@ ul {
     grid-template-columns: auto auto;
     gap: 0.8em 1em;
     padding: 1.2em 0 0 1.2em;
+}
+ul li button {
+    padding: 0,5em 1em;
+    border-radius: 0.3em;
+    cursor: pointer;
 }
 h3 {
     text-align: center;
