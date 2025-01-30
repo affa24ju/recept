@@ -1,4 +1,4 @@
-//Variables som tar imot html element
+//Variables som tar emot html element
 let searchBtn = document.getElementById("searchBtn");
 let result = document.getElementById("result");
 let url = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
@@ -72,13 +72,32 @@ searchBtn.addEventListener("click", () => {
             receipe.style.display = "block";
         });
         addFavorit.addEventListener("click", () => {
-            console.log("add favorit");
-            popup.style.display = "block";
+            console.log("Lägger till favorit...");
+            //addFavorit(myMeal);
+            const recipe = {
+                id: myMeal.idMeal,
+                name: myMeal.strMeal,
+                imageUrl: myMeal.strMealThumb,
+                instructions: myMeal.strInstructions
+            };
+            fetch("http://localhost:8080/api/favorites", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(recipe),
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Receptet tillagt som favorit');
+                popup.style.display = "block";
+                setTimeout(() => {
+                    popup.style.display = "none";
+                }, 2000);
+                    
+            })
+            .catch(error => console.error('Fel vid tillägg av favorit: ', error));
 
-            //Hide popup after 2 sec
-            setTimeout(() => {
-                popup.style.display= "none";
-            }, 2000); 
         });
 
         
@@ -89,6 +108,34 @@ searchBtn.addEventListener("click", () => {
     
     }
 });
+//funktion för att lägga till som favorit
+/*
+function addFavorit(meal){
+    let popup = document.getElementById("popup");
+    const recipe = {
+        id: meal.idMeal,
+        name: meal.strMeal,
+        imageUrl: meal.strMealThumb,
+        instructions: meal.strInstructions
+    };
+    fetch("http://localhost:8080/api/favorites", {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(recipe),
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Receptet tillagt som favorit');
+        popup.style.display = "block";
+        setTimeout(() => {
+            popup.style.display = "none";
+        }, 2000);
+            
+    })
+    .catch(error => console.error('Fel vid tillägg av favorit: ', error));
+}*/
 
 
 
