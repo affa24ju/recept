@@ -1,6 +1,7 @@
 //Variables som tar emot html element
 let searchBtn = document.getElementById("searchBtn");
 let result = document.getElementById("result");
+//let showFavoritesBtn = document.getElementById("showFavoritesBtn");
 let url = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
 
 searchBtn.addEventListener("click", () => {
@@ -108,34 +109,7 @@ searchBtn.addEventListener("click", () => {
     
     }
 });
-//funktion för att lägga till som favorit
-/*
-function addFavorit(meal){
-    let popup = document.getElementById("popup");
-    const recipe = {
-        id: meal.idMeal,
-        name: meal.strMeal,
-        imageUrl: meal.strMealThumb,
-        instructions: meal.strInstructions
-    };
-    fetch("http://localhost:8080/api/favorites", {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(recipe),
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log('Receptet tillagt som favorit');
-        popup.style.display = "block";
-        setTimeout(() => {
-            popup.style.display = "none";
-        }, 2000);
-            
-    })
-    .catch(error => console.error('Fel vid tillägg av favorit: ', error));
-}*/
+
 
 
 
