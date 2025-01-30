@@ -9,10 +9,15 @@
 <body>
     <h1>Favorit recept</h1>
     <ul id="favorit-list">
-
+        <!--Här visar favoriter-->
     </ul>
-    <!--ska skapa en favorites.js fil-->
+    
     <script src="favorites.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            showFavorites();//Anropar funktionen när sidan är laddad
+        });
+    </script>
     
 </body>
 </html>
