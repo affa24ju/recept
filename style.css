@@ -81,7 +81,7 @@ img {
     top: 1.5em;
     border-radius: 0.3em;
     font-weight: 600;
- }
+}
 #showFavoritesBtn {
     position: relative;
     margin: 1.2em auto;
@@ -92,6 +92,16 @@ img {
     border-radius: 0.3em;
     font-weight: 600;
     display: block;
+}
+#deleteFavoritBtn {
+    font-size: 1em;
+    position: relative;
+    padding: 0.9em 0.6em;
+    background-color:bisque;
+    border: none;
+    top: 1.5em;
+    border-radius: 0.3em;
+    font-weight: 400;
 }
 #popup {
     position: absolute;

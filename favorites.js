@@ -25,7 +25,7 @@ function showFavorites(){
                     <div>
                         <h3>${recipe.name}</h3>
                         <img src="${recipe.imageUrl}" alt="${recipe.name}" style="width: 100px;">
-                        <button onclick="deleteFavorit('${recipe.id}')">Ta bort favorti</button>
+                        <button id="deleteFavoritBtn" onclick="deleteFavorit('${recipe.id}')">Ta bort från favorit</button>
                     </div>
                 `;
                 favoriteList.appendChild(listItem);
@@ -37,10 +37,27 @@ function showFavorites(){
         });
     
 }
-//Lägger till eventlistener till 'Visa favoriter' knapp
+
 
 
 //Funktion för att ta bort en favorit
-function deleteFavorit(){
-    //Ska implementera
+function deleteFavorit(id){
+    fetch(`${apiUrl}/${id}`, {
+        method: 'DELETE',
+    })
+    .then(response => {
+        if (response.ok){
+            //vid lyckad delete uppdaterar listan
+            alert('Recept borttaget från favorit!');
+            showFavorites();
+        } else {
+            alert('Fel vid borttagning av favorit!');
+        }
+    })
+    .catch(error => {
+        console.error("Fel vid borttagning av favorit: ", error);
+        
+    });
+
+    
 }
