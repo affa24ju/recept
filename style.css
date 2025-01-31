@@ -88,19 +88,20 @@ img {
     padding: 0.8em 1.5em;
     background-color:darkolivegreen;
     color: bisque;
-    border: none;
+    border:1px solid bisque;
     border-radius: 0.3em;
     font-weight: 600;
     font-size: 1.5em;
     display: block;
+    cursor: pointer;
 }
 #deleteFavoritBtn {
     font-size: 1em;
     position: relative;
     padding: 0.9em 0.6em;
     background-color:bisque;
+    top: -3.5em;
     border: none;
-    top: 1.5em;
     border-radius: 0.3em;
     font-weight: 400;
 }
@@ -152,10 +153,17 @@ ul {
     gap: 0.8em 1em;
     padding: 1.2em 0 0 1.2em;
 }
+
 ul li button {
     padding: 0,5em 1em;
     border-radius: 0.3em;
     cursor: pointer;
+    align-self: start;
+}
+h1 {
+    text-align: center;
+    margin-top: 1em;
+    color: bisque;
 }
 h3 {
     text-align: center;
